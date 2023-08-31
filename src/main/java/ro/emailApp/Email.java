@@ -6,7 +6,7 @@ public class Email {
     private String firstName;
     private String lastName;
     private String password;
-    private String department;
+    private Department department;
     private int mailboxCapacity;
     private String alternateEmail;
 
@@ -16,18 +16,20 @@ public class Email {
         this.lastName = lastName;
         this.department = setDepartment();
 
-        System.out.printf("Email for %s,%s has been created. Added to %s department database.%n",
+        System.out.printf("EMAIL CREATED FOR: %s,%s. %nAdded to %s department database.%n",
                 this.firstName,
                 this.lastName,
                 this.department);
     }
 
     //ask for department
-    private String setDepartment() {
+    private Department setDepartment() {
+        System.out.println("Please input your department("+ Department.allDepartments()+"): ");
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please input your department: ");
-        return scan.nextLine();
+        String answer = scan.nextLine();
+        return Department.returnDepartmentFromString(answer);
     }
+
     //generate a random password
 
     // set the mailbox capacity
