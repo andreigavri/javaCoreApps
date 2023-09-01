@@ -8,6 +8,7 @@ public class Email{
     private String password;
     private Department department;
     private int mailboxCapacity;
+    private int defaultPasswordLength = 10;
     private String alternateEmail;
     private String assignedEmail;
 
@@ -16,7 +17,7 @@ public class Email{
         this.firstName = firstName;
         this.lastName = lastName;
         this.department = setDepartment();
-        this.password = randomPassword(8);
+        this.password = randomPassword(defaultPasswordLength);
 
         System.out.printf("EMAIL CREATED FOR: %s,%s. %nAdded to %s department database.%nPASSWORD: %s%n",
                 this.firstName,
@@ -51,9 +52,15 @@ public class Email{
         char[] password = new char[length];
         for (int i = 0; i < length; i++) {
             int charIndex = (int)(Math.random() * passwordCharSet.length());
-            password[i] = passwordCharSet.charAt(charIndex);
-            //TODO: add conditions to also have random small letters in the password
-            // and at least a special char
+            char randChar = passwordCharSet.charAt(charIndex);
+
+            // randomize the chance of setting a char to lowercase
+            int randCaseChoice = (int)Math.round(Math.random());
+            if(Character.isAlphabetic(randChar) && randCaseChoice == 0) {
+                randChar = Character.toLowerCase(randChar);
+            }
+
+            password[i] = randChar;
         }
         return new String(password);
     }
