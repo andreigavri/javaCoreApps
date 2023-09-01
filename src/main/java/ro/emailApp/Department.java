@@ -7,6 +7,7 @@ public enum Department {
         for(Department d: Department.values()) {
             if(department.equalsIgnoreCase(d.name())) return d;
         }
+        System.out.println("INVALID CHOICE OF DEPARTMENT. SETTING THE DEPARTMENT TO NONE.");
         return NONE;
     }
 
