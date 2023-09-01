@@ -64,6 +64,14 @@ public class Email{
         }
         return new String(password);
     }
+
+    private String generateEmail() {
+        return firstName.toLowerCase().charAt(0) + "." +
+                lastName.toLowerCase() + "@" +
+                //checking if the department is set to NONE and not setting the email address with it if so
+                (department.name().equalsIgnoreCase("none") ? "" : department.name().toLowerCase() + ".") +
+                companyName.toLowerCase() + "." + domain;
+    }
     // set the mailbox capacity
 
     //set the alternate email
