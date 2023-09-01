@@ -2,15 +2,17 @@ package ro.emailApp;
 
 import java.util.Scanner;
 
-public class Email{
+public class Email {
     private String firstName;
     private String lastName;
     private String password;
     private Department department;
     private int mailboxCapacity;
     private int defaultPasswordLength = 10;
-    private String alternateEmail;
     private String assignedEmail;
+    private String alternateEmail;
+    private String companyName = "abcdefg";
+    private String domain = "com";
 
     //Constructor to receive first name and last name
     public Email(String firstName, String lastName) {
@@ -18,31 +20,48 @@ public class Email{
         this.lastName = lastName;
         this.department = setDepartment();
         this.password = randomPassword(defaultPasswordLength);
+        this.assignedEmail = generateEmail();
 
-        System.out.printf("EMAIL CREATED FOR: %s,%s. %nAdded to %s department database.%nPASSWORD: %s%n",
+        System.out.println("----------------------");
+        System.out.printf("NEW EMAIL CREATED FOR: %nUSER: %s, %s%nDEPARTMENT: %s%n",
                 this.firstName,
                 this.lastName,
-                this.department,
-                this.password);
+                this.department);
+        System.out.println("----------------------");
+        System.out.println("EMAIL ADDRESS: " + this.assignedEmail);
+        System.out.println("PASSWORD: " + this.password);
+        System.out.println("----------------------");
     }
 
     //ask for department
     public Department setDepartment() {
         System.out.println("Please input your department(" + Department.allDepartments() + "): ");
-
         // read user input
         Scanner scan = new Scanner(System.in);
         String answer = scan.nextLine();
 
         //search for department string in the Department Enum
-        //if user already has assigned a Department, use the method to change it
         Department newDepartment = Department.returnDepartmentFromString(answer);
-        if (this.department != null)
-            System.out.printf("Changing department for %s %s from %s to %s.%n",
+
+        // if user already has assigned a Department, use the method to change the department and
+        // assign a new email to account
+        if (department != null && department == newDepartment) { // check if the new department is the same and warn user
+            System.out.println("----------------------");
+            System.out.println("USER: " + this.firstName +" " + this.lastName + " IS ALREADY ASSIGNED TO THE " +
+                    this.department + " DEPARTMENT");
+            System.out.println("----------------------");
+        } else if (department != null) {
+            System.out.println("----------------------");
+            System.out.printf("CHANGING DEPARTMENT FOR USER: %s %s, FROM %s TO %s.%n",
                     this.firstName,
                     this.lastName,
                     this.department,
                     newDepartment);
+            this.department = newDepartment;
+            this.assignedEmail = generateEmail();
+            System.out.println("NEW EMAIL ADDRESS ASSIGNED: " + this.assignedEmail);
+            System.out.println("----------------------");
+        }
         return newDepartment;
     }
 
@@ -51,12 +70,12 @@ public class Email{
         String passwordCharSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@!#$%&*";
         char[] password = new char[length];
         for (int i = 0; i < length; i++) {
-            int charIndex = (int)(Math.random() * passwordCharSet.length());
+            int charIndex = (int) (Math.random() * passwordCharSet.length());
             char randChar = passwordCharSet.charAt(charIndex);
 
             // randomize the chance of setting a char to lowercase
-            int randCaseChoice = (int)Math.round(Math.random());
-            if(Character.isAlphabetic(randChar) && randCaseChoice == 0) {
+            int randCaseChoice = (int) Math.round(Math.random());
+            if (Character.isAlphabetic(randChar) && randCaseChoice == 0) {
                 randChar = Character.toLowerCase(randChar);
             }
 
