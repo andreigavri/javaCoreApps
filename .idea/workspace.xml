@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a61c583-da9d-4637-b68b-a11e2c632385" name="Changes" comment="create email class with initial structure">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ro/emailApp/Department.java" afterDir="false" />
+    <list default="true" id="3a61c583-da9d-4637-b68b-a11e2c632385" name="Changes" comment="change dept set method to update email also if dept change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/emailApp/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/emailApp/Email.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ro/emailApp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/emailApp/Main.java" afterDir="false" />
@@ -19,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -36,14 +34,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ro.emailApp.Main" />
@@ -81,11 +79,74 @@
       <option name="project" value="LOCAL" />
       <updated>1693465236610</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="create Department enum with 2 static methods">
+      <option name="closed" value="true" />
+      <created>1693467956894</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693467956894</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update email class to retrieve department from enum Department">
+      <option name="closed" value="true" />
+      <created>1693468002372</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693468002372</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add notification for invalid choice of Department">
+      <option name="closed" value="true" />
+      <created>1693552092799</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693552092799</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add password generator method">
+      <option name="closed" value="true" />
+      <created>1693552135371</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693552135371</updated>
+    </task>
+    <task id="LOCAL-00006" summary="change pass gen method to also add lowercase letters">
+      <option name="closed" value="true" />
+      <created>1693558176126</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693558176126</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add email generator method">
+      <option name="closed" value="true" />
+      <created>1693561792319</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1693561792319</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change dept set method to update email also if dept change">
+      <option name="closed" value="true" />
+      <created>1693561861666</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1693561861666</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create email class with initial structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="create email class with initial structure" />
+    <MESSAGE value="create Department enum with 2 static methods" />
+    <MESSAGE value="update email class to retrieve department from enum Department" />
+    <MESSAGE value="add notification for invalid choice of Department" />
+    <MESSAGE value="add password generator method" />
+    <MESSAGE value="change pass gen method to also add lowercase letters" />
+    <MESSAGE value="add email generator method" />
+    <MESSAGE value="change dept set method to update email also if dept change" />
+    <option name="LAST_COMMIT_MESSAGE" value="change dept set method to update email also if dept change" />
   </component>
 </project>
