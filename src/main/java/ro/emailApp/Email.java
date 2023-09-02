@@ -14,7 +14,7 @@ public class Email {
     private String companyName = "abcdefg";
     private String domain = "com";
 
-    //Constructor to receive first name and last name
+    //Constructor to receive first name and last name and request user input for department
     public Email(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -66,7 +66,7 @@ public class Email {
     }
 
     //generate a random password
-    private String randomPassword(int length) {
+    private static String randomPassword(int length) {
         String passwordCharSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@!#$%&*";
         char[] password = new char[length];
         for (int i = 0; i < length; i++) {
@@ -84,6 +84,7 @@ public class Email {
         return new String(password);
     }
 
+    // generate email address based on fields
     private String generateEmail() {
         return firstName.toLowerCase().charAt(0) + "." +
                 lastName.toLowerCase() + "@" +
@@ -91,9 +92,40 @@ public class Email {
                 (department.name().equalsIgnoreCase("none") ? "" : department.name().toLowerCase() + ".") +
                 companyName.toLowerCase() + "." + domain;
     }
+
     // set the mailbox capacity
+    public void setMailboxCapacity(int mailboxCapacity) {
+        this.mailboxCapacity = mailboxCapacity;
+    }
 
     //set the alternate email
+    public void setAlternateEmail(String alternateEmail) {
+        this.alternateEmail = alternateEmail;
+    }
 
     // change the password
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    // Getters for password, mailbox capacity and email address
+    public String getPassword() {
+        return password;
+    }
+
+    public int getMailboxCapacity() {
+        return mailboxCapacity;
+    }
+
+    public String getAssignedEmail() {
+        return assignedEmail;
+    }
+
+    @Override
+    public String toString() {
+        return "DISPLAY NAME: " + firstName + ' ' + lastName+'\n' +
+                "COMPANY NAME: " + companyName + '\n' +
+                "EMAIL ADDRESS: " + assignedEmail + '\n' +
+                "MAILBOX CAPACITY: " + mailboxCapacity + "mb";
+    }
 }
