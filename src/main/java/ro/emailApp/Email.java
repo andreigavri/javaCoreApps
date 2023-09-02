@@ -18,24 +18,17 @@ public class Email {
     public Email(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+        System.out.println("CREATING EMAIL ADDRESS FOR: " +
+                this.firstName.toUpperCase() + ' ' + this.lastName.toUpperCase());
         this.department = setDepartment();
         this.password = randomPassword(defaultPasswordLength);
         this.assignedEmail = generateEmail();
-
-        System.out.println("----------------------");
-        System.out.printf("NEW EMAIL CREATED FOR: %nUSER: %s, %s%nDEPARTMENT: %s%n",
-                this.firstName,
-                this.lastName,
-                this.department);
-        System.out.println("----------------------");
-        System.out.println("EMAIL ADDRESS: " + this.assignedEmail);
-        System.out.println("PASSWORD: " + this.password);
-        System.out.println("----------------------");
+        System.out.println(this);
     }
 
     //ask for department
     public Department setDepartment() {
-        System.out.println("Please input your department(" + Department.allDepartments() + "): ");
+        System.out.println("PLEASE INPUT DEPARTMENT (" + Department.allDepartments() + "): ");
         // read user input
         Scanner scan = new Scanner(System.in);
         String answer = scan.nextLine();
@@ -46,12 +39,12 @@ public class Email {
         // if user already has assigned a Department, use the method to change the department and
         // assign a new email to account
         if (department != null && department == newDepartment) { // check if the new department is the same and warn user
-            System.out.println("----------------------");
+            System.out.println("\n----------------------------------------");
             System.out.println("USER: " + this.firstName +" " + this.lastName + " IS ALREADY ASSIGNED TO THE " +
                     this.department + " DEPARTMENT");
-            System.out.println("----------------------");
+            System.out.println("----------------------------------------\n");
         } else if (department != null) {
-            System.out.println("----------------------");
+            System.out.println("\n----------------------------------------");
             System.out.printf("CHANGING DEPARTMENT FOR USER: %s %s, FROM %s TO %s.%n",
                     this.firstName,
                     this.lastName,
@@ -60,7 +53,7 @@ public class Email {
             this.department = newDepartment;
             this.assignedEmail = generateEmail();
             System.out.println("NEW EMAIL ADDRESS ASSIGNED: " + this.assignedEmail);
-            System.out.println("----------------------");
+            System.out.println("----------------------------------------\n");
         }
         return newDepartment;
     }
@@ -123,9 +116,10 @@ public class Email {
 
     @Override
     public String toString() {
-        return "DISPLAY NAME: " + firstName + ' ' + lastName+'\n' +
-                "COMPANY NAME: " + companyName + '\n' +
-                "EMAIL ADDRESS: " + assignedEmail + '\n' +
-                "MAILBOX CAPACITY: " + mailboxCapacity + "mb";
+        return "\nDISPLAY NAME: " + firstName + ' ' + lastName +
+                "\nCOMPANY NAME: " + companyName +
+                "\nEMAIL ADDRESS: " + assignedEmail +
+                "\nnEMAIL PASSWORD: " + password +
+                "\nMAILBOX CAPACITY: " + mailboxCapacity + "mb\n";
     }
 }
