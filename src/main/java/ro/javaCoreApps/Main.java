@@ -1,4 +1,6 @@
-package ro.emailApp;
+package ro.javaCoreApps;
+
+import ro.javaCoreApps.emailApp.Email;
 
 public class Main {
     public static void main(String[] args) {

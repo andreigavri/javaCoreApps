@@ -1,4 +1,4 @@
-package ro.emailApp;
+package ro.javaCoreApps.emailApp;
 
 import java.util.Scanner;
 

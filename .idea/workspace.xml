@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a61c583-da9d-4637-b68b-a11e2c632385" name="Changes" comment="change dept set method to update email also if dept change">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/emailApp/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/emailApp/Email.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/emailApp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/emailApp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -44,11 +46,11 @@
 }</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ro.emailApp.Main" />
+      <option name="MAIN_CLASS_NAME" value="ro.javaCoreApps.Main" />
       <module name="emailApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ro.emailApp.*" />
+          <option name="PATTERN" value="ro.javaCoreApps.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

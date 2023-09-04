@@ -1,4 +1,4 @@
-package ro.emailApp;
+package ro.javaCoreApps.emailApp;
 
 public enum Department {
     IT,SALES,DEVELOPMENT,ACCOUNTING,NONE;
