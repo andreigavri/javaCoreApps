@@ -1,3 +1,5 @@
+# Java Core Applications
+
 ### Email Application
 
 This application should perform the following tasks:
