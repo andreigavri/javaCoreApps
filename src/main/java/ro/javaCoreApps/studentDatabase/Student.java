@@ -83,11 +83,21 @@ public class Student {
     }
 
     // view balance
+    public int getTuitionBalance() {
+        System.out.println("Tuition balance for student: " + this.firstName + " " + this.lastName +
+                "(id: " + this.studentID + ") is $" + this.tuitionBalance);
+        return tuitionBalance;
+    }
 
     // pay tuition
-
+    public void payTuition(int payment) {
+        System.out.println("$" + payment + " has been payed for student " + this.firstName + " " + this.lastName +
+                "(id: " + this.studentID + ")");
+        tuitionBalance -= payment;
+        //print status
+        this.getTuitionBalance();
+    }
     // show status
-
 
     @Override
     public String toString() {
