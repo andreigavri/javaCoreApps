@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Student {
+    private static int id = 10001;
+    private static int costOfCourse = 600;
     private String firstName;
     private String middleName;
     private String lastName;
@@ -11,10 +13,11 @@ public class Student {
     private String studentID;
     private List<String> courses;
     private int tuitionBalance;
-    private int costOfCourse = 600;
 
     // constructor to ask for name of Student and year
     public Student() {
+        // increment universal id
+        Student.id ++;
         // prompt user for the name of the student
         String[] fullName = setStudentName().split(" ");
         this.firstName = titleName(fullName[0]);
@@ -23,6 +26,10 @@ public class Student {
 
         //ask for grade year
         this.gradeYear = setYear();
+
+        // set student id value
+        this.studentID = "" + this.firstName.toLowerCase().charAt(0) + id + this.lastName.toLowerCase().charAt(0);
+
         System.out.println(this);
     }
 
@@ -77,6 +84,7 @@ public class Student {
                 (middleName==null ? "": ", middleName='" + middleName + '\'') +
                 ", lastName='" + lastName + '\'' +
                 ", gradeYear='" + gradeYear + '\'' +
+                ", studentID='" + studentID + '\'' +
                 '}';
     }
 }
