@@ -14,7 +14,7 @@ This application should perform the following tasks:
 Your application should do the following:
 - Ask the user how many new students will be added to the database
 - The user should be prompted to enter the name and year for each student
-- The student should have a 5-digit unique ID, with the first number being their grade level
+- The student should have a 7-digit unique ID, with the first letter being their first name first letter and last letter being the last name first letter
 - A student can enroll in the following courses:
 `History 101`
 `Mathematics 101`
