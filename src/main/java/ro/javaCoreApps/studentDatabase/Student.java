@@ -32,8 +32,6 @@ public class Student {
         this.studentID = setStudentId();
 
         this.courses = new ArrayList<>();
-
-        System.out.println(this);
     }
 
     public String setStudentName() {
@@ -97,16 +95,14 @@ public class Student {
         //print status
         this.getTuitionBalance();
     }
-    // show status
 
+    // show status
     @Override
     public String toString() {
-        return "Student{" +
-                "firstName='" + firstName + '\'' +
-                (middleName==null ? "": ", middleName='" + middleName + '\'') +
-                ", lastName='" + lastName + '\'' +
-                ", gradeYear='" + gradeYear + '\'' +
-                ", studentID='" + studentID + '\'' +
-                '}';
+        return "Name: " + firstName + (middleName==null ? ' ': ' ' + middleName + ' ') + lastName + '\n' +
+                "Year: " + gradeYear + '\n' +
+                "Student ID: " + studentID + '\n' +
+                "Courses Enrolled: " + courses.toString() + '\n' +
+                "Tuition Balance: $" + tuitionBalance + '\n' ;
     }
 }
