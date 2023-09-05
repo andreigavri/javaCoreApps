@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a61c583-da9d-4637-b68b-a11e2c632385" name="Changes" comment="change dept set method to update email also if dept change">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="3a61c583-da9d-4637-b68b-a11e2c632385" name="Changes" comment="create method to get tuition balance and pay tuition">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ro/javaCoreApps/studentDatabase/StudentDatabaseApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/javaCoreApps/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/javaCoreApps/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/javaCoreApps/studentDatabase/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/javaCoreApps/studentDatabase/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +25,26 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Vladdstian"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b4ca8b0c-398d-4ce6-9a26-11fa04cbbd2e" />
+        <option name="url" value="https://github.com/Vladdstian/javaCoreApps.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,18 +58,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "studentDB"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ro.javaCoreApps.Main" />
-      <module name="emailApp" />
+      <module name="javaCoreApps" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ro.javaCoreApps.*" />
@@ -60,6 +82,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -137,8 +161,103 @@
       <option name="project" value="LOCAL" />
       <updated>1693561861666</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update main project to include other small projects">
+      <option name="closed" value="true" />
+      <created>1693805682944</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1693805682944</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update readme with 2nd project - student database">
+      <option name="closed" value="true" />
+      <created>1693806940159</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1693806940159</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update readme with 2nd project - student database">
+      <option name="closed" value="true" />
+      <created>1693806975761</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1693806975761</updated>
+    </task>
+    <task id="LOCAL-00012" summary="create initial Student class with fields and constructor">
+      <option name="closed" value="true" />
+      <created>1693892233307</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1693892233307</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add method to set grad year">
+      <option name="closed" value="true" />
+      <created>1693902776465</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1693902776465</updated>
+    </task>
+    <task id="LOCAL-00014" summary="generate student id in constructor">
+      <option name="closed" value="true" />
+      <created>1693903815743</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1693903815743</updated>
+    </task>
+    <task id="LOCAL-00015" summary="create method to generate student id">
+      <option name="closed" value="true" />
+      <created>1693903957638</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1693903957638</updated>
+    </task>
+    <task id="LOCAL-00016" summary="create method to enroll in class">
+      <option name="closed" value="true" />
+      <created>1693905788901</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1693905788901</updated>
+    </task>
+    <task id="LOCAL-00017" summary="create method to get tuition balance and pay tuition">
+      <option name="closed" value="true" />
+      <created>1693905814567</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1693905814567</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="studentDB" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create email class with initial structure" />
@@ -149,6 +268,14 @@
     <MESSAGE value="change pass gen method to also add lowercase letters" />
     <MESSAGE value="add email generator method" />
     <MESSAGE value="change dept set method to update email also if dept change" />
-    <option name="LAST_COMMIT_MESSAGE" value="change dept set method to update email also if dept change" />
+    <MESSAGE value="update main project to include other small projects" />
+    <MESSAGE value="update readme with 2nd project - student database" />
+    <MESSAGE value="create initial Student class with fields and constructor" />
+    <MESSAGE value="add method to set grad year" />
+    <MESSAGE value="generate student id in constructor" />
+    <MESSAGE value="create method to generate student id" />
+    <MESSAGE value="create method to enroll in class" />
+    <MESSAGE value="create method to get tuition balance and pay tuition" />
+    <option name="LAST_COMMIT_MESSAGE" value="create method to get tuition balance and pay tuition" />
   </component>
 </project>
