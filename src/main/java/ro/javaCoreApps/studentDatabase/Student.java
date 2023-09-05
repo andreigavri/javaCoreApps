@@ -7,7 +7,7 @@ public class Student {
     private String firstName;
     private String middleName;
     private String lastName;
-    private int year;
+    private String gradeYear;
     private String studentID;
     private List<String> courses;
     private int tuitionBalance;
@@ -15,21 +15,48 @@ public class Student {
 
     // constructor to ask for name of Student and year
     public Student() {
+        // prompt user for the name of the student
         String[] fullName = setStudentName().split(" ");
         this.firstName = titleName(fullName[0]);
         this.lastName = titleName(fullName[fullName.length-1]);
         if(fullName.length > 2) this.middleName = titleName(fullName[1]);
+
+        //ask for grade year
+        this.gradeYear = setYear();
         System.out.println(this);
     }
 
     public String setStudentName() {
-        Scanner studscan = new Scanner(System.in);
+        Scanner studScan = new Scanner(System.in);
         System.out.println("Please input your complete name separated by spaces (Ex: John Doe, John Will Smith): ");
-        return studscan.nextLine();
+        return studScan.nextLine();
     }
 
-    private String titleName(String s) {
+    private static String titleName(String s) {
         return s.toUpperCase().charAt(0) + s.toLowerCase().substring(1);
+    }
+
+    private String setYear() {
+        Scanner yearScan = new Scanner(System.in);
+        System.out.println("Enter student class level:\n1-Freshman;\n2-Sophomore;\n3-Junior;\n4-Senior.");
+        System.out.print("Choice: ");
+        switch (yearScan.nextInt()) {
+            case (1) -> {
+                return "Freshman";
+            }
+            case (2) -> {
+                return "Sophomore";
+            }
+            case (3) -> {
+                return "Junior";
+            }
+            case (4) -> {
+                return "Senior";
+            }
+            default -> {
+                return setYear();
+            }
+        }
     }
 
     // generate unique id
@@ -42,12 +69,14 @@ public class Student {
 
     // show status
 
+
     @Override
     public String toString() {
-        return "Student{ " +
+        return "Student{" +
                 "firstName='" + firstName + '\'' +
                 (middleName==null ? "": ", middleName='" + middleName + '\'') +
                 ", lastName='" + lastName + '\'' +
+                ", gradeYear='" + gradeYear + '\'' +
                 '}';
     }
 }
