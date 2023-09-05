@@ -2,6 +2,7 @@ package ro.javaCoreApps.studentDatabase;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.SimpleTimeZone;
 
 public class Student {
     private static int id = 10001;
@@ -28,7 +29,7 @@ public class Student {
         this.gradeYear = setYear();
 
         // set student id value
-        this.studentID = "" + this.firstName.toLowerCase().charAt(0) + id + this.lastName.toLowerCase().charAt(0);
+        this.studentID = setStudentId();
 
         System.out.println(this);
     }
@@ -67,7 +68,9 @@ public class Student {
     }
 
     // generate unique id
-
+    private String setStudentId() {
+        return "" + this.firstName.toLowerCase().charAt(0) + id + this.lastName.toLowerCase().charAt(0);
+    }
     // enroll in courses
 
     // view balance
