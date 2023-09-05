@@ -1,8 +1,8 @@
 package ro.javaCoreApps.studentDatabase;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.SimpleTimeZone;
 
 public class Student {
     private static int id = 10001;
@@ -13,7 +13,7 @@ public class Student {
     private String gradeYear;
     private String studentID;
     private List<String> courses;
-    private int tuitionBalance;
+    private int tuitionBalance = 0;
 
     // constructor to ask for name of Student and year
     public Student() {
@@ -30,6 +30,8 @@ public class Student {
 
         // set student id value
         this.studentID = setStudentId();
+
+        this.courses = new ArrayList<>();
 
         System.out.println(this);
     }
@@ -71,7 +73,14 @@ public class Student {
     private String setStudentId() {
         return "" + this.firstName.toLowerCase().charAt(0) + id + this.lastName.toLowerCase().charAt(0);
     }
+
     // enroll in courses
+    public void enroll(String courseName) {
+        this.courses.add(courseName);
+        this.tuitionBalance += costOfCourse;
+        System.out.println("Student " + this.firstName + " " + this.lastName + "(id: " + this.studentID +
+                ") has been enrolled in the following course: " + titleName(courseName) + '\n');
+    }
 
     // view balance
 
