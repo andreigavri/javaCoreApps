@@ -6,5 +6,23 @@ public class Saving extends Account {
 
     Saving(String name, String socialSecurityNumber, double initialDeposit) {
         super(name, socialSecurityNumber, initialDeposit);
+        this.accountNumber = '1' + this.accountNumber;
+        setSafetyDepositBox();
+        this.showInfo();
+    }
+
+    private void setSafetyDepositBox() {
+        safetyDepositBoxID = (int)(Math.random() * Math.pow(10, 3));
+        safetyDepositBoxKey = (int)(Math.random() * Math.pow(10, 4));
+    }
+
+    @Override
+    public void showInfo() {
+        super.showInfo();
+        System.out.println(
+                "\tSAVING ACCOUNT FEATURES: " +
+                "\n\tSAFETY DEPOSIT BOX ID: " + safetyDepositBoxID+
+                "\n\tSAFETY DEPOSIT BOX KEY: " + safetyDepositBoxKey
+        );
     }
 }
