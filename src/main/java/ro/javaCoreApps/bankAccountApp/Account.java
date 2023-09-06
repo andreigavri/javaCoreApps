@@ -1,6 +1,7 @@
 package ro.javaCoreApps.bankAccountApp;
 
-public abstract class Account implements IBaseRate{
+public abstract class Account implements IBaseRate {
+    static int index = 10000;
     String name;
     String socialSecurityNumber;
     double balance = 0;
@@ -11,18 +12,23 @@ public abstract class Account implements IBaseRate{
         this.name = name;
         this.socialSecurityNumber = socialSecurityNumber;
         this.balance += initialDeposit;
-
-        //test
-        System.out.println(this.getClass().getSimpleName());
-        System.out.println(this);
+        this.accountNumber = setAccountNumber();
+        index++;
     }
 
-    @Override
-    public String toString() {
-        return "Account{" +
-                "name='" + name + '\'' +
-                ", socialSecurityNumber='" + socialSecurityNumber + '\'' +
-                ", balance=" + balance +
-                '}';
+    private String setAccountNumber() {
+        String lastTwoDigSSN = this.socialSecurityNumber.substring(socialSecurityNumber.length()-2);
+        int uniqueID = index;
+        int randomNum = (int)(Math.random()*Math.pow(10, 3));
+        return lastTwoDigSSN + uniqueID + randomNum;
+    }
+
+    public void showInfo() {
+        System.out.println(
+                        "NAME: " + name +
+                        "\nACCOUNT TYPE: " + this.getClass().getSimpleName().toUpperCase() +
+                        "\nACCOUNT NUMBER: " + accountNumber +
+                        "\nBALANCE: " + balance
+                        );
     }
 }
