@@ -21,8 +21,8 @@ public class Saving extends Account {
         super.showInfo();
         System.out.println(
                 "\tSAVING ACCOUNT FEATURES: " +
-                "\n\tSAFETY DEPOSIT BOX ID: " + safetyDepositBoxID+
-                "\n\tSAFETY DEPOSIT BOX KEY: " + safetyDepositBoxKey
+                "\n\t- Safety deposit box ID: " + safetyDepositBoxID+
+                "\n\t- Safety deposit box key: " + safetyDepositBoxKey
         );
     }
 }
