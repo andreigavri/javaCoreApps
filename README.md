@@ -33,9 +33,10 @@ Your application should do the following:
 - Use a proper data structure to hold all these accounts
 - Both savings and checking accounts share the following properties:
   - deposit()
-  - withdraw
+  - withdraw()
   - transfer()
   - showInfo()
+  
   - 11-Digit Account Number (generated with the following process: 1 or 2 depending on Savings or Checking, last two digits of SSN, unique 5-digit number, and random 3-digit number)
  
 
