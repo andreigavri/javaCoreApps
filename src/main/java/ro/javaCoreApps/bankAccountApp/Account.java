@@ -29,20 +29,24 @@ public abstract class Account implements IBaseRate {
     public void deposit(double amount) {
         balance = balance + amount;
         System.out.println("$" + amount + " has been added to " + this.name);
-        printBalance();
     }
 
     public void withdraw(double amount) {
-        if(amount>balance) System.out.println("Not enough money in the account!");
-        else balance = balance - amount;
-        printBalance();
+        if(checkEnoughBalance(amount)) {
+            System.out.println("$" + amount + " has been withdrawn from " + this.name);
+        } else System.out.println("Not enough money in the account!");
     }
 
     public void transfer(Account destAccount, double amount) {
-        this.balance -= amount;
-        destAccount.balance += amount;
-        System.out.println("$" + amount + " transferred to " + destAccount.name);
+        if(checkEnoughBalance(amount)) {
+            System.out.println("$" + amount + " transferred to " + destAccount.name);
+            destAccount.deposit(amount);
+        } else System.out.println("Not enough money in the account!");
         printBalance();
+    }
+
+    private boolean checkEnoughBalance(double amount) {
+        return amount <= this.balance;
     }
 
     public void printBalance() {
