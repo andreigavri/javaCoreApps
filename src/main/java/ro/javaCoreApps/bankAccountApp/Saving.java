@@ -11,6 +11,11 @@ public class Saving extends Account {
         this.showInfo();
     }
 
+    @Override
+    public void setRate() {
+        this.interestRate = getBaseRate()-0.25;
+    }
+
     private void setSafetyDepositBox() {
         safetyDepositBoxID = (int)(Math.random() * Math.pow(10, 3));
         safetyDepositBoxKey = (int)(Math.random() * Math.pow(10, 4));

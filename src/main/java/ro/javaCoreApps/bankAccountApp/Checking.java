@@ -12,6 +12,11 @@ public class Checking extends Account {
         this.showInfo();
     }
 
+    @Override
+    public void setRate() {
+        this.interestRate = 0.15*getBaseRate();
+    }
+
     private void setDebitCard() {
         debitCardNumber = (int)(Math.random() * Math.pow(10, 12));
         debitCardPin = (int)(Math.random() * Math.pow(10, 4));
