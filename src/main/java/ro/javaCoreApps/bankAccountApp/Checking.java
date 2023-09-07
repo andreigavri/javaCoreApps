@@ -27,7 +27,7 @@ public class Checking extends Account {
         System.out.println(
                 "\tCHECKING ACCOUNT FEATURES: " +
                 "\n\t- Debit card number: " + debitCardNumber+
-                "\n\t- Debit card PIN: " + debitCardPin + '\n'
+                "\n\t- Debit card PIN: " + debitCardPin
         );
     }
 }
