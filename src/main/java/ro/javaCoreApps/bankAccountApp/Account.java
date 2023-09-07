@@ -1,12 +1,12 @@
 package ro.javaCoreApps.bankAccountApp;
 
 public abstract class Account implements IBaseRate {
-    static int index = 10000;
-    String name;
-    String socialSecurityNumber;
-    double balance = 0;
-    String accountNumber;
-    double interestRate;
+    private static int index = 10000;
+    private String socialSecurityNumber;
+    private double balance = 0;
+    private String name;
+    protected String accountNumber;
+    protected double interestRate;
 
     Account(String name, String socialSecurityNumber, double initialDeposit) {
         this.name = name;

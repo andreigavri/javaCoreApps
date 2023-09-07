@@ -1,8 +1,8 @@
 package ro.javaCoreApps.bankAccountApp;
 
 public class Checking extends Account {
-    int debitCardNumber;
-    int debitCardPin;
+    private int debitCardNumber;
+    private int debitCardPin;
 
 
     Checking(String name, String socialSecurityNumber, double initialDeposit) {
